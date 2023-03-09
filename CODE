@@ -1,0 +1,10 @@
+function addTagsToChat(chatId, tags) {
+  // Get the chat by ID
+  const chat = getChatById(chatId);
+
+  // Add the tags to the chat's labels
+  chat.labels = chat.labels.concat(tags);
+
+  // Update the chat in the chat app's database
+  updateChat(chat);
+}
